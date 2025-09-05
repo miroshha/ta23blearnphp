@@ -1,30 +1,48 @@
 <?php
 
-echo "Hello world!\n";
-echo('Hello world');
-echo "\n";
-$name = 'Kaspar';
-echo 'Hello $name';
-echo "\nHello $name\n";
+$array = array(1, 2, 3); // old way
 
-$var = '💩';
-var_dump($var);
-var_dump(strlen($var));
-$var = 1;
-var_dump($var);
-$var = 1.5;
-var_dump($var);
+var_dump($array);
 
-var_dump(PHP_INT_MAX);
-var_dump(PHP_FLOAT_MAX);
+$array = [1, 2, 3];
 
-$var = true;
-var_dump($var);
+var_dump($array);
 
-$var = false;
-var_dump($var);
+$array = [
+    1,
+    'hello',
+    true,
+    [1, 2, 3],
+    3.4,
+];
+var_dump($array);
 
-$bar = null;
+$array = [
+    'name' => 'Kaspar',
+    'age' => 32,
+    'isMale' => true,
+];
+var_dump($array);
 
-var_dump($bar);
-?>
+$array = [
+    1,
+    true,
+    'name' => 'Kaspar',
+    'age' => 32,
+    'asdasd',
+    'isMale' => true,
+    100 => 4,
+    5,
+    6.3,
+    NULL,
+];
+var_dump($array);
+
+var_dump($array[1]);
+var_dump($array['name']);
+$array = [
+    [ 1, 2, 3],
+    [ 4, 5, 6],
+    [ 7, 8, 9],
+];
+var_dump($array[2][1]);
