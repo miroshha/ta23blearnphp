@@ -1,22 +1,34 @@
 <?php
 
-$num = 1;
+$bool = true && false;
+$bool = false && true;
+$bool = false && false;
+$bool = true && true;
+var_dump($bool);
+$bool = true || false;
+$bool = false || true;
+$bool = true || true;
+$bool = false || false;
+var_dump($bool);
+$bool = !false;
+var_dump($bool);
+$bool = !true;
+var_dump($bool);
 
-$num = $num + 1;
-$num = $num - 1;
-$num = $num * 2;
-$num = $num / 2;
-$num = 7; // 
-$num = $num % 2;
-$num = 14; // 
-$num = $num % 4;
-$num = $num ** 2;
-var_dump($num);
-$num += 1;
-$num -= 1;
-$num *= 2;
-$num /= 2;
-$num %= 2;
-$num **= 2;
-$num++;
-$num--;
+
+$bool = (true || false && true) && !(!false || false && true);
+var_dump($bool);
+$bool = false;
+
+$bool = 10 > 4;
+$bool = 10 < 4;
+$bool = 10 < 10;
+$bool = 10 > 10;
+$bool = 10 == 10;
+$bool = 10 == '10';
+$bool = 10 === '10';
+$bool = 10 != '10';
+$bool = 10 !== '10';
+$bool = 10 <= 10;
+$bool = 10 >= 10;
+var_dump($bool);
