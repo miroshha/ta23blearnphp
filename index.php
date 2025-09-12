@@ -1,51 +1,27 @@
 <?php
 
-function hello() {
-    var_dump('hello');
-}
+class Box {
+    public $width;
+    public $height;
+    public $lenght;
 
-hello();
-hello();
-hello();
-hello();
-
-
-function helloName($name='Unknown') {
-    var_dump("hello $name");
-}
-
-helloName('Kaspar');
-helloName('Martin');
-helloName();
-
-function sum($a, $b) {
-    return $a+$b;
-}
-
-var_dump(sum(1,4));
-$answer = sum(6,5);
-
-function biggerThanTen($n) {
-    if($n > 10){
-        return 'Bigger';
-    }
-    return 'Smaller';
-    var_dump('asdasdasdasd'); // never runs
-}
-
-var_dump(biggerThanTen(11));
-var_dump(biggerThanTen(4));
-
-function anything(...$args) {
-    var_dump($args);
-}
-anything(1, 2, 3, 4, 5, 6, 7);
-
-function recursive($n){
-    if($n<10){
-        var_dump($n);
-        recursive($n+1);
+    public function volume(){
+        return $this->width * $this->height * $this->lenght;
     }
 }
 
-recursive(0);
+$box1 = new Box();
+$box1->width = 10;
+$box1->height = 20;
+$box1->lenght = 30;
+var_dump($box1);
+var_dump($box1->volume());
+
+$box2 = new Box();
+$box2->width = 40;
+$box2->height = 50;
+$box2->lenght = 60;
+var_dump($box2);
+var_dump($box2->volume());
+var_dump($box1);
+
