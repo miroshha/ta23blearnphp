@@ -1,34 +1,53 @@
 <?php
+$i = 4;
+if($i > 10){
+    var_dump('bigger');
+} elseif ($i == 10){
+    var_dump('equals');
+} else {
+    var_dump('smaller');
+}
 
-$bool = true && false;
-$bool = false && true;
-$bool = false && false;
-$bool = true && true;
-var_dump($bool);
-$bool = true || false;
-$bool = false || true;
-$bool = true || true;
-$bool = false || false;
-var_dump($bool);
-$bool = !false;
-var_dump($bool);
-$bool = !true;
-var_dump($bool);
+$day = (int) date('w', strtotime('12.09.2025'));
 
+var_dump($day);
 
-$bool = (true || false && true) && !(!false || false && true);
-var_dump($bool);
-$bool = false;
+if($day == 1) {
+    var_dump('Esmaspäev');
+} else if($day == 2) {
+    var_dump('Teisipäev');
+}  else if($day == 3) {
+    var_dump('Kolmapäev');
+}  else if($day == 4) {
+    var_dump('Neljapäev');
+}  else if($day == 5 || $day == 6) {
+    var_dump('Pidupäev');
+}  else if($day == 7) {
+    var_dump('Pühapäev');
+}  else {
+    var_dump('Imelik päev');
+}
 
-$bool = 10 > 4;
-$bool = 10 < 4;
-$bool = 10 < 10;
-$bool = 10 > 10;
-$bool = 10 == 10;
-$bool = 10 == '10';
-$bool = 10 === '10';
-$bool = 10 != '10';
-$bool = 10 !== '10';
-$bool = 10 <= 10;
-$bool = 10 >= 10;
-var_dump($bool);
+switch($day) {
+    case 1: 
+        var_dump('Esmaspäev');
+        break;
+    case 2: 
+        var_dump('Teisipäev');
+        break;
+    case 3: 
+        var_dump('Kolmapäev');
+        break;
+    case 4: 
+        var_dump('Neljapäev');
+        break;
+    case 5: 
+    case 6: 
+        var_dump('Pidupäev');
+        break;
+    case 7: 
+        var_dump('Pühapäev');
+        break;
+    default:
+        var_dump('Imelik päev');
+}
