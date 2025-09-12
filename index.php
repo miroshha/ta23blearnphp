@@ -10,18 +10,31 @@ class Box {
     }
 }
 
-$box1 = new Box();
-$box1->width = 10;
-$box1->height = 20;
-$box1->lenght = 30;
-var_dump($box1);
-var_dump($box1->volume());
+$num1 = 1;
+$num2 = &$num1;
+$num2 = 2;
+var_dump($num1);
 
-$box2 = new Box();
-$box2->width = 40;
-$box2->height = 50;
-$box2->lenght = 60;
-var_dump($box2);
-var_dump($box2->volume());
-var_dump($box1);
+
+$box1 = new Box();
+$box1->width = 1;
+$box2 = clone $box1;
+$box2->width = 2;
+var_dump($box1, $box2);
+var_dump($box1->width);
+
+$array = [1,2,3,4,5];
+
+for($i=0;$i<count($array);$i++){
+    $num = $array[$i];
+    $num *= 2;
+}
+
+
+foreach($array as &$num){
+    $num *= 2;
+}
+
+var_dump($array);
+
 
