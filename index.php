@@ -1,44 +1,51 @@
 <?php
 
-for($i=0;$i<10;$i++){
-    var_dump($i);
+function hello() {
+    var_dump('hello');
 }
 
-for($i=9;$i>=0;$i--){
-    var_dump($i);
+hello();
+hello();
+hello();
+hello();
+
+
+function helloName($name='Unknown') {
+    var_dump("hello $name");
 }
 
-for($i=1;$i<1_000_000;$i*=2){
-    var_dump($i);
+helloName('Kaspar');
+helloName('Martin');
+helloName();
+
+function sum($a, $b) {
+    return $a+$b;
 }
 
-$start = time();
-$i = 0;
-while(time()<$start+1){
-    $i++;
-}
-var_dump($i);
-$start = time();
-for($i=0;time()<$start+1;$i++){
-  
-}
-var_dump($i);
+var_dump(sum(1,4));
+$answer = sum(6,5);
 
-$i = 10;
-while($i<10){
-    var_dump('WHILE');
+function biggerThanTen($n) {
+    if($n > 10){
+        return 'Bigger';
+    }
+    return 'Smaller';
+    var_dump('asdasdasdasd'); // never runs
 }
 
-do {
-    var_dump('DO');
-} while($i<10);
+var_dump(biggerThanTen(11));
+var_dump(biggerThanTen(4));
 
-$array = ['Apples', 'Cherries', 'Pears', 'Apricot'];
+function anything(...$args) {
+    var_dump($args);
+}
+anything(1, 2, 3, 4, 5, 6, 7);
 
-foreach($array as $fruit){
-    var_dump($fruit);
+function recursive($n){
+    if($n<10){
+        var_dump($n);
+        recursive($n+1);
+    }
 }
 
-foreach($array as $key=>$fruit){
-    var_dump("$key=>$fruit");
-}
+recursive(0);
