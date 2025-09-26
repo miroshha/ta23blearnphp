@@ -11,18 +11,28 @@ function dump(...$args) {
 }
 
 spl_autoload_register(function($class) {
+    dump($class);
+    $class = substr($class, 4);
     require_once __DIR__. "/../src/$class.php";
 });
 
 // require_once __DIR__. '/../src/Router.php';
 // require_once __DIR__. '/../src/DB.php';
 
+use App\Controllers\PublicController as PC;
+
 $router = new App\Router();
 dump($router);
 $db = new App\DB();
 dump($db);
-$controller = new App\Controllers\PublicController();
+$controller = new PC();
+$controller = new PC();
+$controller = new PC();
+$controller = new PC();
+$controller = new PC();
+$controller = new PC();
 dump($controller);
+
 // switch ($_SERVER['REQUEST_URI']) {
 //     case '/': 
 //         $posts = [
