@@ -50,6 +50,6 @@ class PublicController
 
     public function answer()
     {
-        
+        dump($_GET, $_POST, $_REQUEST);
     }
 }
