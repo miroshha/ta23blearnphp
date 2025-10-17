@@ -7,8 +7,16 @@ function dump(...$args)
     echo '</pre>';
 }
 
-function view($viewName, $variables = [])
-{
+function dd(...$args) {
+    dump(...$args);
+    die;
+}
+
+function view($viewName, $variables=[]) {
     extract($variables);
     include __DIR__ . "/views/$viewName.php";
+}
+
+function redirect($path) {
+    header("Location: $path");
 }
