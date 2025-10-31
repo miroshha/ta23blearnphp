@@ -1,5 +1,5 @@
 {
-  "name": "kaspar.martin.suursa/learnphp",
+  "name": "miron.gavva/learnphp",
   "type": "project",
   "license": "WTFPL",
   "autoload": {
@@ -9,8 +9,8 @@
   },
   "authors": [
     {
-      "name": "Kaspar Martin Suursalu",
-      "email": "kasparsu@gmail.com"
+      "name": "Miron Gavva",
+      "email": "mirongavva3@gmail.com"
     }
   ],
   "require": {
